@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+.container { max-width: 600px; margin: auto; text-align: center; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; }
+.form-group input { width: 100%; }
+.btn { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+.btn:hover { background-color: #0056b3; }
+.ascii-art {
+    width: 100%; /* or any specific width */
+    height: auto;
+    max-width: 300px; /* Adjust based on desired maximum size */
+}
+
