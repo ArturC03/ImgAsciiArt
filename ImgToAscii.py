@@ -3,7 +3,7 @@ import requests
 from io import BytesIO
 import numpy as np
 import base64
-
+import os
 # Bing Chilling
 def urlParaImagem(url):
     resposta = requests.get(url)
@@ -31,12 +31,12 @@ def imagemParaAsciiArt(caminhoImagem):
         for x in range(larguraNova):
             valorDoPixel = imagem.getpixel((x, y))
             arteAscii += pixelParaCaracter(valorDoPixel)
-        arteAscii += '\n'
+        arteAscii += os.linesep
     
     return arteAscii
    
 def asciiParaImagem(arteAscii, fonteTamanho=30):
-    linhas = arteAscii.split('\n')
+    linhas = arteAscii.split(os.linesep)
     larguraLinha = max(len(linha) for linha in linhas)
     alturaImagem = len(linhas)
     
