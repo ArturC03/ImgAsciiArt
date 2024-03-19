@@ -1,13 +1,78 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-.container { max-width: 600px; margin: auto; text-align: center; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 5px; }
-.form-group input { width: 100%; }
-.btn { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
-.btn:hover { background-color: #0056b3; }
-.ascii-art {
-    width: 100%; /* or any specific width */
-    height: auto;
-    max-width: 300px; /* Adjust based on desired maximum size */
+body {
+    font-family: 'Space Mono', monospace, sans-serif; 
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
+h1 {
+    color: white;
+    padding: 15px;
+}
+
+.container {
+    max-width: 5000px;
+    width: 100%; /* Ensure it takes up the necessary width */
+    margin: auto;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 2px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.image-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; /* Adjust this value to control the roundness */
+    overflow: hidden; /* Ensures the content inside also gets clipped to the border radius */
+}
+
+#ascii-art {
+    height: auto; /* Maintain aspect ratio */
+    width: 80%; /* Adjust based on container size or preference */
+    max-width: 750px; /* Prevent it from becoming too large */
+    border-radius: 25% 10%;
+}
+.content {
+     position: relative;
+  z-index: 10; /* Ensure this is higher than the canvas' z-index */
+  color: white;
+  position: relative; /* Isso permite que o z-index seja aplicado */
+  z-index: 2; /* Maior que o z-index do canvas, fazendo com que fique por cima */
+  color: white; /* Garante contraste contra o fundo escuro do efeito Matrix */
+  /* Outros estilos para o seu conteúdo */
+}

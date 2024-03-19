@@ -8,11 +8,19 @@
     <link rel = "stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>ASCII Art Image</h1>
     <!-- Display the ASCII art image -->
-    <img src="{{ ascii_art_image | safe }}" alt="ASCII Art Image" id = "ascii-art" style="width: 300px; height: auto;" >
+    
+    <h1>Ascii Image</hi>
+
+    <div = class="content">    
+
+        <div class = "image-container">
+        <img src="{{ ascii_art_image | safe }}" alt="ASCII Art Image" id = "ascii-art" >
+        </div>
     <br>
     <a href="/">Convert another image</a>
+            </div>
+    <script src="../static/matrix.js"></script>
 </body>
 </html>
 
